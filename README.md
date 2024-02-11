@@ -6,5 +6,5 @@
 - [NextJS 14](https://nextjs.org/)
 - [Lucide React](https://lucide.dev/guide/packages/lucide-react)
 - [Next Theme](https://github.com/pacocoursey/next-themes)
-- Dark mode
+- Dark/Light mode
 - Social icons
