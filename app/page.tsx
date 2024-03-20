@@ -5,17 +5,17 @@ import { buttonVariants } from '@/components/ui/button'
 
 export default function IndexPage() {
   return (
-    <section className='container grid items-center gap-6 pb-8 pt-6 md:py-10'>
-      <div className='flex max-w-[980px] flex-col items-start gap-2'>
-        <h1 className='text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl'>
+    <section className='container grid gap-6 py-10'>
+      <div className='flex w-full flex-col gap-2 text-center'>
+        <h1 className='text-2xl font-extrabold leading-tight tracking-tighter md:text-4xl'>
           Dedicated to crafting products <br className='hidden sm:inline' />
           with focus on intricate details.
         </h1>
-        <p className='max-w-[700px] text-lg text-muted-foreground'>
+        <p className='text-lg text-muted-foreground'>
           Focuses on JavaScript and Generative AI, makes Web Apps, OSS.
         </p>
       </div>
-      <div className='flex gap-4'>
+      <div className='flex items-center justify-center gap-4 py-5'>
         <Link href={siteConfig.links.projects} className={buttonVariants()}>
           Projects
         </Link>

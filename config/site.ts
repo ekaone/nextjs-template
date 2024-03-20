@@ -6,12 +6,18 @@ export const siteConfig = {
   mainNav: [
     {
       title: 'Contact',
-      href: '/contact'
+      href: '/contact',
+      isActive: true
+    },
+    {
+      title: 'Project',
+      href: '/project',
+      isActive: true
     }
   ],
   links: {
-    twitter: 'https://twitter.com/',
-    github: 'https://github.com/',
+    twitter: 'https://twitter.com/twekaone',
+    github: 'https://github.com/ekaone/nextjs-template',
     projects: '/project'
   }
 }
