@@ -58,7 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
           </ThemeProvider>
           <Metrics />
-          <GoogleAnalytics gaId="GTM-M2V5KT4D" />
+          <GoogleAnalytics gaId="G-PVY8F2TSGL" />
         </body>
       </html>
     </>
