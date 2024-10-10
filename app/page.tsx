@@ -2,18 +2,27 @@ import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
 import { buttonVariants } from '@/components/ui/button'
+import TextAnimation from '@/components/text-animation'
+
+const TextArray = [
+  'NextJS',
+  'Generative AI',
+  'Tailwind',
+  'Typescript',
+  'Langchain JS',
+  'Llama Index'
+]
 
 export default function IndexPage() {
   return (
     <section className='container grid gap-6 py-10'>
       <div className='flex w-full flex-col gap-2 text-center'>
-        <h1 className='text-2xl font-extrabold leading-tight tracking-tighter md:text-4xl'>
-          Dedicated to crafting products <br className='hidden sm:inline' />
-          with focus on intricate details.
+        <h1 className='scroll-m-20 text-2xl font-extrabold leading-tight tracking-tighter md:text-4xl'>
+          Crafting products with focus on <br className='hidden sm:inline' />
+          <span>
+            <TextAnimation words={TextArray} />
+          </span>
         </h1>
-        <p className='text-lg text-muted-foreground'>
-          Focuses on JavaScript and Generative AI, makes Web Apps, OSS.
-        </p>
       </div>
       <div className='flex items-center justify-center gap-4 py-5'>
         <Link href={siteConfig.links.projects} className={buttonVariants()}>
