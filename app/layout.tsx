@@ -1,14 +1,8 @@
 import '@/styles/globals.css'
 import { Metadata, Viewport } from 'next'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { ThemeProvider } from '@/components/theme-provider'
 
 import { siteConfig } from '@/config/site'
-import { fontSans } from '@/lib/fonts'
-import { cn } from '@/lib/utils'
-import { SiteHeader } from '@/components/site-header'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { ThemeProvider } from '@/components/theme-provider'
-import { PHProvider } from './providers'
 
 export const metadata: Metadata = {
   title: {
@@ -36,32 +30,20 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang='en' suppressHydrationWarning>
-        <head />
-        <PHProvider>
-          <body
-            className={cn(
-              'min-h-screen bg-background font-sans antialiased',
-              fontSans.variable
-            )}
+    <html lang='en' suppressHydrationWarning>
+      <head />
+      <body>
+        <main>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            themes={['light', 'dark', 'orange', 'rose', 'green', 'blue']}
           >
-            <ThemeProvider
-              attribute='class'
-              defaultTheme='system'
-              enableSystem
-              themes={['light', 'dark', 'orange', 'rose', 'green', 'blue']}
-            >
-              <div className='relative flex min-h-screen flex-col'>
-                <SiteHeader />
-                <div className='flex-1'>{children}</div>
-              </div>
-              <TailwindIndicator />
-            </ThemeProvider>
-            <GoogleAnalytics gaId='G-PVY8F2TSGL' />
-          </body>
-        </PHProvider>
-      </html>
-    </>
+            {children}
+          </ThemeProvider>
+        </main>
+      </body>
+    </html>
   )
 }

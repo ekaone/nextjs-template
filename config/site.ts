@@ -10,8 +10,8 @@ export const siteConfig = {
       isActive: true
     },
     {
-      title: 'Project',
-      href: '/project',
+      title: 'Dashboard',
+      href: '/dashboard',
       isActive: true
     }
   ],
