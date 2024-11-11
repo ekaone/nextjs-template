@@ -31,7 +31,7 @@ const data = {
   user: {
     name: 'nextjs',
     email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg'
+    avatar: '/avatars/eka.png'
   },
   teams: [
     {
@@ -59,7 +59,7 @@ const data = {
       items: [
         {
           title: 'History',
-          url: '#'
+          url: '/dashboard/history'
         },
         {
           title: 'Starred',
@@ -140,7 +140,7 @@ const data = {
   projects: [
     {
       name: 'Design Engineering',
-      url: '#',
+      url: '/dashboard/engineering',
       icon: Frame
     },
     {
